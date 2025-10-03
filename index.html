@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko's World</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="faviconV2.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bg-gradient-start: #c0399e;
+            --bg-gradient-end: #4d2c8e;
+            --text-color: #d080f7; /* Aangepast naar lichte, leesbare kleur */
+            --avatar-border: #4d2c8e; /* Donkere rand voor avatar */
+            
+            --btn-djstream: #7c3aed;
+            --btn-twitch: #6b21a8;
+            --btn-youtube: #c51a1a;
+            --btn-twitter: #14171A;
+            --btn-discord: #4f46e5;
+            --btn-throne: #a52a2a;
+            --btn-amazon: #232f3e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: var(--text-color);
+            background-color: var(--bg-gradient-end); /* Fallback color */
+            background-image: url('website-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-section h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 6rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Schaduw toegevoegd */
+        }
+
+        .avatar-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .avatar {
+            width: 350px;
+        }
+
+        .profile-section h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Schaduw toegevoegd */
+        }
+
+        .links-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-button:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.1);
+        }
+
+        .link-button i {
+            width: 24px;
+            margin-right: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .btn-djstream   { background-color: var(--btn-djstream); }
+        .btn-twitch     { background-color: var(--btn-twitch); }
+        .btn-youtube    { background-color: var(--btn-youtube); }
+        .btn-twitter    { background-color: var(--btn-twitter); }
+        .btn-discord    { background-color: var(--btn-discord); }
+        .btn-throne     { background-color: var(--btn-throne); }
+        .btn-amazon     { background-color: var(--btn-amazon); }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .main-container {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+            .profile-section h1 {
+                font-size: 5rem;
+            }
+            .avatar {
+                width: 250px;
+            }
+            .profile-section h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            .profile-section h1 {
+                font-size: 4rem;
+            }
+            .avatar {
+                width: 180px;
+            }
+            .profile-section h2 {
+                font-size: 2rem;
+            }
+            .link-button {
+                width: 100%;
+                max-width: 300px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <section class="profile-section">
+            <h1>Neko</h1>
+            <div class="avatar-container">
+                <!-- Plaats hier je eigen afbeelding, bijvoorbeeld avatar.png -->
+                <img src="profile-head-round-out.png" class="avatar" alt="Neko - Content Creator">
+            </div>
+            <h2>Content Creator</h2>
+        </section>
+
+        <section class="links-section">
+            <ul>
+                <li><a href="#" class="link-button btn-djstream"><i class="fa-solid fa-wifi"></i><span>DJ Stream</span></a></li>
+                <li><a href="#" class="link-button btn-twitch"><i class="fa-brands fa-twitch"></i><span>Twitch</span></a></li>
+                <li><a href="#" class="link-button btn-youtube"><i class="fa-brands fa-youtube"></i><span>Youtube</span></a></li>
+                <li><a href="#" class="link-button btn-twitter"><i class="fa-brands fa-x-twitter"></i><span>X / Twitter</span></a></li>
+                <li><a href="#" class="link-button btn-discord"><i class="fa-brands fa-discord"></i><span>Discord</span></a></li>
+                <li><a href="#" class="link-button btn-throne"><i class="fa-solid fa-crown"></i><span>Throne</span></a></li>
+                <li><a href="#" class="link-button btn-amazon"><i class="fa-solid fa-gift"></i><span>Amazon Wishlist</span></a></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
